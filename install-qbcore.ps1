@@ -1,19 +1,19 @@
 Write-Host ""
-Write-Host "====================================="
+Write-Host "========================================="
 Write-Host " TCAdmin QBCore Installer"
-Write-Host "====================================="
+Write-Host "========================================="
 Write-Host ""
 
-$ServerData = ".\server-data"
+$Git = Get-Command git -ErrorAction SilentlyContinue
 
-Write-Host "Checking server-data..."
-
-if (!(Test-Path $ServerData))
+if ($null -eq $Git)
 {
-    Write-Host "Creating server-data..."
-    New-Item -ItemType Directory $ServerData
+    Write-Host "Git is not installed!" -ForegroundColor Red
+    exit
 }
 
+Write-Host "Git Found:"
+git --version
+
 Write-Host ""
-Write-Host "Installer is working!"
-Write-Host ""
+Write-Host "Installer Ready"
