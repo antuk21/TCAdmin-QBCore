@@ -1,0 +1,10 @@
+{
+    "framework": "qbcore",
+    "repositories": [
+        {
+            "name": "qb-core",
+            "url": "https://github.com/qbcore-framework/qb-core.git",
+            "folder": "[qb]"
+        }
+    ]
+}
